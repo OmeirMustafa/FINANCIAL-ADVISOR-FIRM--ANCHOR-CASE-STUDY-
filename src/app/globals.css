@@ -1,34 +1,55 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0F172A;
-  /* Deep Navy (Slate 900) */
-  --color-primary-foreground: #FFFFFF;
+    --color-navy-900: #1E293B;
+    /* Slate 900 base */
+    --color-navy-800: #334155;
+    /* Slate 700 borders */
+    --color-gold-400: #FCD34D;
+    /* Amber 300 - Accents */
+    --color-gold-500: #F59E0B;
+    /* Amber 500 - Primary Brand */
+    --color-gold-600: #D97706;
+    /* Amber 600 - Hover */
 
-  --color-secondary: #F59E0B;
-  /* Amber 500 */
-  --color-secondary-foreground: #0F172A;
+    --font-serif: var(--font-playfair);
+    --font-sans: var(--font-inter);
 
-  --color-muted: #F8FAFC;
-  /* Slate 50 */
-  --color-muted-foreground: #64748B;
-  /* Slate 500 */
-
-  --color-background: #0F172A;
-  /* Default dark background for prestige */
-  --color-foreground: #F8FAFC;
-  /* Light text */
-
-  --font-serif: var(--font-playfair);
-  --font-sans: var(--font-inter);
+    --animate-fade-in: fadeIn 0.6s ease-out;
+    --animate-scale-up: scaleUp 0.8s ease-out;
 }
 
-/* Base Styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Base Reset */
 body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
+    background-color: var(--color-navy-900);
+    color: #FFFFFF;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -37,25 +58,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+    font-family: var(--font-serif);
 }
 
-/* Scrollbar refinement */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0F172A;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+::selection {
+    background-color: var(--color-gold-500);
+    color: var(--color-navy-900);
 }
