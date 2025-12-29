@@ -1,65 +1,178 @@
-import Image from "next/image";
+import { Header } from "../components/layout/Header";
+import { Footer } from "../components/layout/Footer";
+import { Container } from "../components/ui/Container";
+import { Section } from "../components/ui/Section";
+import { Button } from "../components/ui/Button";
+import { H1, H2, H3, P } from "../components/ui/Typography";
+import { ShieldCheck, TrendingUp, Users, ArrowRight, BookOpen, Scale } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="flex min-h-screen flex-col pt-20">
+      <Header />
+
+      {/* HERO SECTION */}
+      <section className="relative flex flex-col justify-center min-h-[85vh] bg-primary text-primary-foreground overflow-hidden">
+        {/* Subtle Background Elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#1e293b] via-primary to-primary opacity-60 z-0" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] z-0" />
+
+        <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium tracking-wide uppercase">
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+              Accepting New Private Clients
+            </div>
+
+            <H1 className="text-white">
+              Preserving your legacy for the <span className="text-secondary italic">next generation.</span>
+            </H1>
+
+            <P className="text-primary-foreground/80 text-lg md:text-xl max-w-lg">
+              We provide fiduciary wealth management and strategic planning for families who value capital preservation over speculation.
+            </P>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button size="lg" withArrow href="#contact">
+                Schedule a Private Consultation
+              </Button>
+              <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10" href="#process">
+                How We Work
+              </Button>
+            </div>
+          </div>
+
+          {/* Abstract Visual Representation of Stability */}
+          <div className="hidden lg:block relative h-full min-h-[500px] w-full delay-300 animate-fade-in opacity-0 fill-mode-forwards">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-white/5 rounded-full" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border border-white/10 rounded-full" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-secondary/5 backdrop-blur-3xl rounded-full" />
+          </div>
+        </Container>
+      </section>
+
+      {/* SERVICES SECTION */}
+      <Section id="services">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="space-y-6 p-8 rounded-sm bg-muted/30 border border-transparent hover:border-secondary/20 transition-all duration-500">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary">
+                <ShieldCheck size={28} strokeWidth={1.5} />
+              </div>
+              <H3>Wealth Preservation</H3>
+              <P className="text-sm">
+                Our primary mandate is to protect what you have built. We utilize tax-efficient strategies and risk-managed portfolios to ensure capital stability across market cycles.
+              </P>
+            </div>
+
+            <div className="space-y-6 p-8 rounded-sm bg-muted/30 border border-transparent hover:border-secondary/20 transition-all duration-500">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary">
+                <TrendingUp size={28} strokeWidth={1.5} />
+              </div>
+              <H3>Strategic Growth</H3>
+              <P className="text-sm">
+                Growth should not come at the expense of sleep. We design bespoke investment portfolios tailored to your unique liquidity needs and long-term liquidity goals.
+              </P>
+            </div>
+
+            <div className="space-y-6 p-8 rounded-sm bg-muted/30 border border-transparent hover:border-secondary/20 transition-all duration-500">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary">
+                <Users size={28} strokeWidth={1.5} />
+              </div>
+              <H3>Legacy Planning</H3>
+              <P className="text-sm">
+                True wealth is multi-generational. We collaborate with your estate attorneys to ensure your assets are transferred efficiently and according to your wishes.
+              </P>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* TRUST / PHILOSOPHY SECTION */}
+      <Section background="muted" id="philosophy">
+        <Container className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="order-2 lg:order-1">
+            <div className="aspect-[4/5] relative bg-zinc-200 rounded-sm overflow-hidden">
+              {/* Placeholder for high-end office or abstract architectural photo */}
+              <div className="absolute inset-0 bg-neutral-300" />
+              <div className="absolute inset-0 flex items-center justify-center text-neutral-500 font-serif italic text-lg">
+                [Refined Architectural Imagery]
+              </div>
+            </div>
+          </div>
+
+          <div className="order-1 lg:order-2 space-y-8">
+            <div className="inline-flex items-center gap-2 text-secondary font-medium tracking-wide uppercase text-sm">
+              <Scale size={16} />
+              The Fiduciary Standard
+            </div>
+            <H2>Unconflicted advice. <br />Transparent fees. <br />Your interests first.</H2>
+            <P>
+              We are legally bound to act in your best interest at all times. Unlike broker-dealers who may sell proprietary products, we operate as an independent Registered Investment Advisor (RIA).
+            </P>
+            <P>
+              Our compensation comes solely from our clients, not from third-party commissions. This alignment ensures that when we recommend a strategy, it is because it is right for you—not because it pays us a fee.
+            </P>
+
+            <div className="grid grid-cols-2 gap-8 pt-4 border-t border-black/5 mt-8">
+              <div>
+                <p className="text-4xl font-serif text-primary mb-1">20+</p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground">Years Experience</p>
+              </div>
+              <div>
+                <p className="text-4xl font-serif text-primary mb-1">100%</p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground">Fiduciary Focus</p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* PROCESS SECTION */}
+      <Section id="process">
+        <Container size="md" className="text-center mb-16">
+          <H2>A clear path to peace of mind.</H2>
+          <P>We do not believe in high-pressure sales. Our onboarding process is designed to give you clarity before you commit a single dollar.</P>
+        </Container>
+
+        <Container>
+          <div className="relative border-l border-primary/10 ml-6 md:ml-0 md:border-none md:grid md:grid-cols-3 md:gap-12">
+            {[
+              { title: "1. The Discovery Call", desc: "A 30-minute conversation to assess your current situation and determine if we are the right partners for your goals." },
+              { title: "2. The Strategy Map", desc: "We build a comprehensive financial model stressing-testing your portfolio against various market conditions." },
+              { title: "3. Implementation", desc: "Only when you are confident in the plan do we begin the transfer and stewardship of your assets." }
+            ].map((step, i) => (
+              <div key={i} className="mb-12 ml-8 md:ml-0 md:mb-0 relative group">
+                <span className="hidden md:block absolute top-0 left-0 w-full h-[1px] bg-primary/10" />
+                <span className="absolute -left-[35px] md:left-0 md:-top-[5px] w-3 h-3 rounded-full bg-secondary ring-4 ring-white" />
+
+                <h4 className="text-lg font-bold font-serif text-primary mt-6 mb-3">{step.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* CTA SECTION */}
+      <Section background="primary" id="contact" className="text-center">
+        <Container size="md" className="space-y-8">
+          <H2 className="text-white mb-2">Ready to secure your future?</H2>
+          <P className="text-primary-foreground/70 max-w-xl mx-auto">
+            Take the first step towards financial clarity. Schedule a complimentary, confidential consultation with our senior advisors.
+          </P>
+          <div className="pt-4">
+            <Button size="lg" variant="secondary" className="min-w-[200px]" withArrow>
+              Request Consultation
+            </Button>
+          </div>
+          <p className="text-xs text-primary-foreground/40 mt-8">
+            * Minimum investable assets of $1M recommended for our core private client services.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        </Container>
+      </Section>
+
+      <Footer />
+    </main>
   );
 }
