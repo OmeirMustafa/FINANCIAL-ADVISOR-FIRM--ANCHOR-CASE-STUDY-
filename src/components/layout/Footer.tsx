@@ -1,8 +1,12 @@
 import { Container } from "../ui/Container";
+import { TechStackBadge } from "../case-study/TechStackBadge";
 
 export function Footer() {
     return (
         <footer className="bg-primary text-primary-foreground py-16">
+            <div className="flex justify-center w-full">
+                <TechStackBadge />
+            </div>
             <Container className="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div className="col-span-1 md:col-span-2">
                     <span className="text-2xl font-serif font-bold block mb-6">Anchor Capital</span>

@@ -6,11 +6,14 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { H1, H2, H3, P } from "@/components/ui/Typography";
-import { ShieldCheck, TrendingUp, Users, ArrowRight, BookOpen, Scale, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, TrendingUp, Users, Scale, CheckCircle2 } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import CountUp from "react-countup";
 import { Schema } from "@/components/seo/Schema"; // Assume this is created
 import { useRef } from "react";
+import { HeroMetrics } from "@/components/case-study/HeroMetrics";
+import { ProcessGrid } from "@/components/case-study/ProcessGrid";
+import { Watermark } from "@/components/case-study/Watermark";
 
 // Fade Up Animation Variant
 const fadeInUp = {
@@ -42,9 +45,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col pt-20 bg-[#0F172A]">
       <Schema />
       <Header />
+      <Watermark />
 
       {/* HERO SECTION */}
       <section className="relative flex flex-col justify-center min-h-[90vh] bg-[#0F172A] text-white overflow-hidden">
+        {/* Metric Banner for Case Study */}
+        <HeroMetrics />
+
         {/* Subtle Background Elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-[#0F172A] to-[#0F172A] opacity-80 z-0" />
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02] z-0" />
@@ -280,6 +287,9 @@ export default function Home() {
           </div>
         </Container>
       </Section>
+
+      {/* CASE STUDY PROCESS GRID */}
+      <ProcessGrid />
 
       {/* CTA SECTION */}
       <Section id="audit" className="text-center bg-slate-900 relative overflow-hidden">
