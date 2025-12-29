@@ -40,6 +40,22 @@ export default function Home() {
                 How We Work
               </Button>
             </div>
+
+            {/* Trust Anchors */}
+            <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-x-8 gap-y-3 text-sm text-primary-foreground/70 animate-fade-in delay-200">
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-secondary/80" />
+                <span>Independent Fiduciary</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-secondary/80" />
+                <span>Fee-Only Structure</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-secondary/80" />
+                <span>Comprehensive Planning</span>
+              </div>
+            </div>
           </div>
 
           {/* Abstract Visual Representation of Stability */}
@@ -61,7 +77,7 @@ export default function Home() {
               </div>
               <H3>Wealth Preservation</H3>
               <P className="text-sm">
-                Our primary mandate is to protect what you have built. We utilize tax-efficient strategies and risk-managed portfolios to ensure capital stability across market cycles.
+                Protect what you have accomplished. We build resilient portfolios designed to withstand volatility, ensuring your lifestyle remains secure regardless of economic cycles.
               </P>
             </div>
 
@@ -71,7 +87,7 @@ export default function Home() {
               </div>
               <H3>Strategic Growth</H3>
               <P className="text-sm">
-                Growth should not come at the expense of sleep. We design bespoke investment portfolios tailored to your unique liquidity needs and long-term liquidity goals.
+                Grow without unnecessary risk. Your portfolio is custom-engineered to meet your specific liquidity needs and long-term goals, avoiding trendy speculation.
               </P>
             </div>
 
@@ -81,9 +97,16 @@ export default function Home() {
               </div>
               <H3>Legacy Planning</H3>
               <P className="text-sm">
-                True wealth is multi-generational. We collaborate with your estate attorneys to ensure your assets are transferred efficiently and according to your wishes.
+                Pass on more than just assets. We structure tax-efficient wealth transfer strategies to ensure your values and resources empower the next generation.
               </P>
             </div>
+          </div>
+
+          <div className="mt-16 text-center animate-fade-in">
+            <p className="text-muted-foreground mb-4 text-sm font-medium">Unsure which strategy aligns with your goals?</p>
+            <Button variant="ghost" className="text-primary hover:bg-primary/5" withArrow href="#philosophy">
+              Understand Our Philosophy
+            </Button>
           </div>
         </Container>
       </Section>
@@ -148,6 +171,26 @@ export default function Home() {
 
                 <h4 className="text-lg font-bold font-serif text-primary mt-6 mb-3">{step.title}</h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* FAQ SECTION */}
+      <Section background="muted" id="faq">
+        <Container size="md">
+          <H2 className="text-center mb-12">Common questions for new clients.</H2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { q: "Are you a fiduciary?", a: "Yes. We are legally and ethically bound to put your interests first, 100% of the time. We do not sell products or accept commissions." },
+              { q: "What is your fee structure?", a: "We operate on a transparent fee-only basis, calculated as a percentage of assets under management. This aligns our incentives with your growth." },
+              { q: "Do you have a minimum?", a: "To deliver our comprehensive level of service, we typically work with families who have $1M+ in investable assets." },
+              { q: "Where are my assets held?", a: "Your assets are held by an independent third-party custodian (such as Schwab or Fidelity) for your safety and peace of mind." }
+            ].map((faq, i) => (
+              <div key={i} className="bg-background p-6 rounded-sm border border-transparent hover:border-secondary/20 transition-colors">
+                <h4 className="font-serif font-bold text-lg text-primary mb-2">{faq.q}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

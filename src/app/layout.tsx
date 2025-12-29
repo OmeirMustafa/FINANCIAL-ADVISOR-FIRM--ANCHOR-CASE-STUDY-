@@ -16,8 +16,15 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Anchor Capital | Wealth Management & Preservation",
-  description: "Preserving your legacy for the next generation. Fiduciary wealth management for high-net-worth families.",
+  title: "Anchor Capital | Fiduciary Wealth Management & Financial Planning",
+  description: "Independent fiduciary advisors preserving wealth for high-net-worth families. Fee-only financial planning, investment management, and legacy strategy.",
+  openGraph: {
+    title: "Anchor Capital | Fiduciary Wealth Management",
+    description: "Preserving your legacy for the next generation. Independent, fee-only advice.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Anchor Capital",
+  },
 };
 
 export default function RootLayout({
