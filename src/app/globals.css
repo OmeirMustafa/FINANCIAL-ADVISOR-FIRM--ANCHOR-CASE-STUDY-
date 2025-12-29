@@ -1,17 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0F172A; /* Deep Navy */
+  --color-primary: #0F172A;
+  /* Deep Navy (Slate 900) */
   --color-primary-foreground: #FFFFFF;
-  
-  --color-secondary: #C5A065; /* Elegant Gold */
-  --color-secondary-foreground: #0F172A;
-  
-  --color-muted: #F4F4F5;
-  --color-muted-foreground: #52525B;
 
-  --color-background: #FCFCFC; /* Slightly warm off-white */
-  --color-foreground: #18181B; /* Zinc 900 */
+  --color-secondary: #F59E0B;
+  /* Amber 500 */
+  --color-secondary-foreground: #0F172A;
+
+  --color-muted: #F8FAFC;
+  /* Slate 50 */
+  --color-muted-foreground: #64748B;
+  /* Slate 500 */
+
+  --color-background: #0F172A;
+  /* Default dark background for prestige */
+  --color-foreground: #F8FAFC;
+  /* Light text */
 
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-inter);
@@ -25,22 +31,31 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
-/* Utility for fade-in animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Scrollbar refinement */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+::-webkit-scrollbar-track {
+  background: #0F172A;
 }
 
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

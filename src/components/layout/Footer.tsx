@@ -37,9 +37,18 @@ export function Footer() {
                 </div>
             </Container>
 
-            <Container className="mt-16 pt-8 border-t border-primary-foreground/10 text-center text-sm text-primary-foreground/40">
-                <p>&copy; {new Date().getFullYear()} Anchor Capital Management. All rights reserved.</p>
-                <p className="mt-2 text-xs">Anchor Capital is a registered investment advisor. Information presented is for educational purposes only and does not intend to make an offer or solicitation for the sale or purchase of any specific securities, investments, or investment strategies.</p>
+            <Container className="mt-16 pt-8 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/40 space-y-4">
+                <p>&copy; {new Date().getFullYear()} Anchor Capital Advisors LLC. All rights reserved.</p>
+                <p className="max-w-4xl mx-auto leading-relaxed">
+                    Anchor Capital Advisors LLC is a Registered Investment Advisor (RIA) with the U.S. Securities and Exchange Commission (SEC).
+                    Registration does not imply a certain level of skill or training. All information presented is for educational purposes only and
+                    does not intend to make an offer or solicitation for the sale or purchase of any specific securities, investments, or investment strategies.
+                    Investments involve risk and, unless otherwise stated, are not guaranteed. Be sure to first consult with a qualified financial advisor and/or
+                    tax professional before implementing any strategy discussed herein. Past performance is not indicative of future performance.
+                </p>
+                <p>
+                    <a href="#" className="underline hover:text-primary-foreground/60">Form ADV Part 2A</a> | <a href="#" className="underline hover:text-primary-foreground/60">Privacy Policy</a>
+                </p>
             </Container>
         </footer>
     );
