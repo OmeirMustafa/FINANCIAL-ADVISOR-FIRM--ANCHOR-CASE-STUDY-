@@ -6,6 +6,7 @@ import { AlertCircle, Lock, MousePointer2, LayoutTemplate, ArrowRight } from "lu
 import { AnalysisCard } from "@/components/case-study/AnalysisCard";
 import { StrategySection } from "@/components/case-study/StrategySection";
 import { DemoFrame } from "@/components/case-study/DemoFrame";
+import { CaseStudyFooter } from "@/components/case-study/CaseStudyFooter";
 
 export default function CaseStudyPage() {
     return (
@@ -226,6 +227,8 @@ export default function CaseStudyPage() {
                     </div>
                 </div>
             </section>
+
+            <CaseStudyFooter />
         </main>
     );
 }
