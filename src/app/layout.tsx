@@ -15,11 +15,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-    title: "Tech Founder Wealth Advisor | Post-Exit Tax Optimization | Anchor Capital",
-    description: "Save 30%+ on exit taxes. Fiduciary RIA for $1M+ tech founders. Specialized in QSBS, concentration risk, and estate planning.",
+    title: "Financial UX Strategy Case Study | High-Trust Design",
+    description: "A conceptual strategic redesign of a boutique RIA website, moving from 'generic capability listing' to a conversion-focused asset for UHNW tech founders.",
     openGraph: {
-        title: "Anchor Capital | Post-Exit Wealth Preservation",
-        description: "Fiduciary wealth management for tech founders. Stop the tax bleeding and secure your liquidity.",
+        title: "Financial UX Strategy Case Study",
+        description: "Building Trust in High-Stakes Wealth Management. A strategic redesign analysis.",
         type: "website",
     },
 };
