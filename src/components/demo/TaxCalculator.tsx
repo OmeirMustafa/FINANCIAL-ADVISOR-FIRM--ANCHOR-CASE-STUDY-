@@ -44,13 +44,13 @@ export function TaxCalculator() {
                 {/* Input Section */}
                 <div className="space-y-8">
                     <div>
-                        <h3 className="text-2xl font-serif text-white mb-2">Exit Tax Simulator</h3>
-                        <p className="text-slate-400 text-sm">Estimate your liability before the LOI.</p>
+                        <h3 className="text-2xl font-serif text-white mb-2 font-medium">Exit Tax Simulator</h3>
+                        <p className="text-slate-300 text-sm">Estimate your liability before the LOI.</p>
                     </div>
 
                     <div className="space-y-6">
                         <div>
-                            <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Exit Valuation</label>
+                            <label className="block text-xs font-bold text-slate-200 uppercase tracking-widest mb-2">Exit Valuation</label>
                             <div className="relative">
                                 <DollarSign size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gold-500" />
                                 <input
@@ -60,9 +60,9 @@ export function TaxCalculator() {
                                     step="100000"
                                     value={valuation}
                                     onChange={(e) => setValuation(Number(e.target.value))}
-                                    className="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-gold-500 mb-4"
+                                    className="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-gold-500 mb-4 ring-1 ring-white/10"
                                 />
-                                <div className="bg-navy-900 border border-white/10 rounded px-4 py-2 text-white font-mono text-lg w-full pl-10 focus-within:border-gold-500 transition-colors">
+                                <div className="bg-navy-900 border border-white/20 rounded px-4 py-2 text-white font-mono text-lg w-full pl-10 focus-within:border-gold-500 transition-colors shadow-inner">
                                     {valuation.toLocaleString()}
                                 </div>
                             </div>
@@ -70,11 +70,11 @@ export function TaxCalculator() {
 
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">State</label>
+                                <label className="block text-xs font-bold text-slate-200 uppercase tracking-widest mb-2">State</label>
                                 <select
                                     value={state}
                                     onChange={(e) => setState(e.target.value)}
-                                    className="w-full bg-navy-900 border border-white/10 rounded px-4 py-2 text-white focus:outline-none focus:border-gold-500 transition-colors"
+                                    className="w-full bg-navy-900 border border-white/20 rounded px-4 py-2 text-white focus:outline-none focus:border-gold-500 transition-colors shadow-inner font-medium"
                                 >
                                     {Object.keys(STATE_RATES).map(s => <option key={s} value={s}>{s}</option>)}
                                 </select>
@@ -84,36 +84,36 @@ export function TaxCalculator() {
                                     type="checkbox"
                                     checked={qsbsEligible}
                                     onChange={(e) => setQsbsEligible(e.target.checked)}
-                                    className="w-5 h-5 rounded border-white/20 bg-navy-900 text-gold-500 focus:ring-gold-500 accent-gold-500"
+                                    className="w-5 h-5 rounded border-white/30 bg-navy-900 text-gold-500 focus:ring-gold-500 accent-gold-500"
                                 />
-                                <label className="text-sm text-slate-300">QSBS Strategy Applied?</label>
+                                <label className="text-sm text-slate-200 font-medium">QSBS Strategy Applied?</label>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Output Section */}
-                <div className="bg-navy-950/50 rounded-lg p-6 border border-white/5 flex flex-col justify-center relative">
+                <div className="bg-navy-950/80 rounded-lg p-6 border border-white/10 flex flex-col justify-center relative shadow-lg">
                     <div className="mb-6">
-                        <span className="text-xs uppercase tracking-widest text-slate-500 block mb-1">Estimated Net Proceeds</span>
-                        <div className="text-4xl md:text-5xl font-serif text-white">
+                        <span className="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-1">Estimated Net Proceeds</span>
+                        <div className="text-4xl md:text-5xl font-serif text-white drop-shadow-md">
                             $<CountUp end={netProceeds} separator="," duration={1} preserveValue />
                         </div>
                     </div>
 
                     <div className="space-y-4 mb-8">
                         <div className="flex justify-between text-sm">
-                            <span className="text-slate-400">Federal Tax</span>
-                            <span className="text-white font-mono text-red-400">-${fedTax.toLocaleString()}</span>
+                            <span className="text-slate-300 font-medium">Federal Tax</span>
+                            <span className="text-white font-mono text-red-400 font-bold">-${fedTax.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                            <span className="text-slate-400">State Tax ({state})</span>
-                            <span className="text-white font-mono text-red-400">-${stateTax.toLocaleString()}</span>
+                            <span className="text-slate-300 font-medium">State Tax ({state})</span>
+                            <span className="text-white font-mono text-red-400 font-bold">-${stateTax.toLocaleString()}</span>
                         </div>
                         <div className="h-px bg-white/10 my-2" />
                         <div className="flex justify-between text-sm font-bold">
                             <span className="text-gold-500">Anchor Strategy Savings</span>
-                            <span className="text-emerald-400 font-mono">+${savings.toLocaleString()}</span>
+                            <span className="text-emerald-400 font-mono text-base">+${savings.toLocaleString()}</span>
                         </div>
                     </div>
 
