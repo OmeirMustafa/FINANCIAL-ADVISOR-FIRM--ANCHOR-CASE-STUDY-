@@ -18,7 +18,7 @@ export function AnalysisCard({ icon: Icon, title, problem, consequence, delay = 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay, duration: 0.5 }}
-            className="bg-white border border-slate-200 p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white border border-slate-200 p-8 rounded-sm shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:border-gold-500/30 transition-all duration-300 group"
         >
             <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-red-50 text-red-600 rounded-full">

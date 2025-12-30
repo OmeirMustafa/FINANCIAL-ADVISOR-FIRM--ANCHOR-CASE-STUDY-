@@ -31,7 +31,7 @@ export function Hero() {
                     {/* Headline */}
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] tracking-tight">
                         You've exited. <br />
-                        <span className="text-gold-500 italic">Now the real tax fight begins.</span>
+                        <span className="text-gradient-gold italic">Now the real tax fight begins.</span>
                     </h1>
 
                     {/* Body Text - Fixed Spacing mt-12 */}
@@ -69,34 +69,37 @@ export function Hero() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="hidden lg:block relative"
                 >
-                    <div className="relative z-10 bg-navy-800/50 backdrop-blur-xl border border-white/10 p-8 rounded-xl shadow-2xl transform rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
-                        <div className="flex justify-between items-start mb-10">
-                            <div>
-                                <p className="text-xs uppercase tracking-widest text-slate-400 mb-1">Projected Tax Savings</p>
-                                <p className="text-4xl font-serif text-white">
-                                    $<CountUp end={1420000} separator="," duration={2.5} />
-                                </p>
+                    <div className="relative group">
+                        <div className="absolute inset-0 bg-gold-500/20 rounded-xl blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700" />
+                        <div className="relative z-10 glass-card p-8 rounded-xl transform rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
+                            <div className="flex justify-between items-start mb-10">
+                                <div>
+                                    <p className="text-xs uppercase tracking-widest text-slate-400 mb-1">Projected Tax Savings</p>
+                                    <p className="text-4xl font-serif text-white">
+                                        $<CountUp end={1420000} separator="," duration={2.5} />
+                                    </p>
+                                </div>
+                                <TrendingUp className="text-emerald-400 w-8 h-8" />
                             </div>
-                            <TrendingUp className="text-emerald-400 w-8 h-8" />
-                        </div>
 
-                        {/* Simple Bars */}
-                        <div className="space-y-4">
-                            <div className="flex items-center gap-4">
-                                <div className="w-full bg-navy-900 h-2 rounded-full overflow-hidden">
-                                    <motion.div initial={{ width: 0 }} animate={{ width: "85%" }} transition={{ duration: 1.5 }} className="h-full bg-emerald-500" />
+                            {/* Simple Bars */}
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-full bg-navy-900 h-2 rounded-full overflow-hidden">
+                                        <motion.div initial={{ width: 0 }} animate={{ width: "85%" }} transition={{ duration: 1.5 }} className="h-full bg-emerald-500" />
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-4 opacity-50">
+                                    <div className="w-full bg-navy-900 h-2 rounded-full overflow-hidden">
+                                        <motion.div initial={{ width: 0 }} animate={{ width: "60%" }} transition={{ duration: 1.5, delay: 0.2 }} className="h-full bg-gold-500" />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-4 opacity-50">
-                                <div className="w-full bg-navy-900 h-2 rounded-full overflow-hidden">
-                                    <motion.div initial={{ width: 0 }} animate={{ width: "60%" }} transition={{ duration: 1.5, delay: 0.2 }} className="h-full bg-gold-500" />
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="mt-10 flex justify-between text-xs text-slate-500 font-mono">
-                            <span>PRE-PLANNING</span>
-                            <span>POST-PLANNING</span>
+                            <div className="mt-10 flex justify-between text-xs text-slate-500 font-mono">
+                                <span>PRE-PLANNING</span>
+                                <span>POST-PLANNING</span>
+                            </div>
                         </div>
                     </div>
                 </motion.div>

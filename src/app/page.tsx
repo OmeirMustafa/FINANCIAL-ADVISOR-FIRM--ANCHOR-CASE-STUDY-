@@ -24,7 +24,7 @@ export default function CaseStudyPage() {
                             Conceptual Strategic Redesign
                         </span>
                         <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] mb-8">
-                            Building Trust in <br /> High-Stakes Wealth Management.
+                            <span className="text-gradient-gold">Building Trust</span> in <br /> High-Stakes Wealth Management.
                         </h1>
                         <p className="text-xl text-slate-300 max-w-2xl leading-relaxed mb-10">
                             A strategic redesign of a boutique RIA website, moving from "generic capability listing" to a risk-aware, conversion-focused asset for UHNW tech founders.
@@ -47,7 +47,7 @@ export default function CaseStudyPage() {
                 <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16">
                     <div>
                         <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 block">The Business Reality</span>
-                        <h2 className="text-3xl font-serif text-navy-900 mb-6">Trust &gt; Aesthetics.</h2>
+                        <h2 className="text-3xl font-serif text-navy-900 mb-6"><span className="text-gradient-gold">Trust &gt; Aesthetics.</span></h2>
                         <p className="text-slate-600 leading-relaxed mb-6">
                             In the wealth management sector, a website is not a brochure—it is a risk assessment surface for prospective clients.
                             High-net-worth individuals (HNWIs) do not "shop" for advisors; they vet them for competence, safety, and alignment.
