@@ -51,7 +51,7 @@ export function DemoFrame() {
                 {/* Frame */}
                 <div className={clsx(
                     "mx-auto transition-all duration-500 ease-in-out border-4 border-navy-900 rounded-xl overflow-hidden shadow-2xl bg-white relative",
-                    device === "desktop" ? "w-full max-w-6xl h-[800px]" : "w-[375px] h-[750px]"
+                    device === "desktop" ? "w-full max-w-6xl h-[600px] md:h-[800px]" : "w-full max-w-[375px] h-[750px]"
                 )}>
                     <div className="absolute top-0 w-full h-8 bg-navy-900 flex items-center px-4 gap-2">
                         <div className="w-2 h-2 rounded-full bg-red-500" />

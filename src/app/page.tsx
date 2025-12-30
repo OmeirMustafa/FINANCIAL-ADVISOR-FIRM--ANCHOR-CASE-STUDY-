@@ -14,7 +14,7 @@ export default function CaseStudyPage() {
             {/* 1. HERO */}
             <section className="relative py-32 bg-navy-900 text-white overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-60 pointer-events-none" />
-                <div className="max-w-6xl mx-auto px-8 relative z-10">
+                <div className="max-w-6xl mx-auto px-6 md:px-8 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

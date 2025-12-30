@@ -13,7 +13,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-[#1E293B] z-0" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-60 pointer-events-none" />
 
-            <div className="max-w-6xl mx-auto px-8 w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-6xl mx-auto px-6 md:px-8 w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 {/* Left Content */}
                 <motion.div
