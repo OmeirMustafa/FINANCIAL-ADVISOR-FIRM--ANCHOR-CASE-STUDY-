@@ -31,7 +31,7 @@ export default function CaseStudyPage() {
 
                         <div className="flex gap-4">
                             <Link
-                                href="/demo"
+                                href="#demo"
                                 className="inline-flex items-center gap-2 bg-gold-500 text-navy-900 font-bold px-8 py-4 rounded-sm hover:bg-gold-400 transition-all hover:translate-x-1 shadow-[0_0_20px_rgba(245,158,11,0.2)]"
                             >
                                 View Live Demo <ArrowRight size={20} />
