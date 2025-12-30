@@ -19,24 +19,27 @@ export default function CaseStudyPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
+                        className="text-center max-w-4xl mx-auto"
                     >
-                        <span className="inline-block px-3 py-1 rounded-full border border-gold-500/30 text-gold-500 text-xs font-bold tracking-widest uppercase mb-8">
+                        <span className="inline-block px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-500 text-xs font-bold tracking-[0.2em] uppercase mb-8 backdrop-blur-sm">
                             Conceptual Strategic Redesign
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] mb-8">
-                            <span className="text-gradient-gold">Building Trust</span> in <br /> High-Stakes Wealth Management.
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] mb-8 tracking-tight">
+                            <span className="text-gradient-gold">Building Trust</span> <br />
+                            <span className="text-white">in High-Stakes Wealth.</span>
                         </h1>
-                        <p className="text-xl text-slate-300 max-w-2xl leading-relaxed mb-10">
-                            A strategic redesign of a boutique RIA website, moving from "generic capability listing" to a risk-aware, conversion-focused asset for UHNW tech founders.
+                        <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-12 font-light">
+                            A strategic redesign moving from "generic capability listing" to a risk-aware, conversion-focused asset for UHNW tech founders.
                         </p>
 
-                        <div className="flex gap-4">
+                        <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                             <Link
                                 href="#demo"
-                                className="inline-flex items-center gap-2 bg-gold-500 text-navy-900 font-bold px-8 py-4 rounded-sm hover:bg-gold-400 transition-all hover:translate-x-1 shadow-[0_0_20px_rgba(245,158,11,0.2)]"
+                                className="inline-flex items-center gap-2 bg-gold-500 text-navy-900 font-bold px-10 py-4 rounded-sm hover:bg-white hover:text-navy-900 transition-all hover:-translate-y-1 shadow-[0_0_30px_rgba(245,158,11,0.3)] tracking-wide text-sm"
                             >
-                                View Live Demo <ArrowRight size={20} />
+                                View Live Demo <ArrowRight size={18} />
                             </Link>
+                            <span className="text-slate-500 text-sm tracking-wide">or scroll for analysis</span>
                         </div>
                     </motion.div>
                 </div>

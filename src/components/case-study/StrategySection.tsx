@@ -36,10 +36,16 @@ export function StrategySection({ number, title, what, why, risk, isReverse = fa
                     </div>
                 </motion.div>
 
-                <div className="bg-navy-900 text-white p-8 rounded-xl border border-white/10 shadow-xl relative overflow-hidden group hover:-translate-y-1 transition-transform duration-500">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl -mr-16 -mt-16 transition-opacity duration-500 group-hover:opacity-100" />
-                    <span className="text-xs font-bold text-gold-500 uppercase tracking-widest block mb-3">Risk Mitigation</span>
-                    <p className="text-slate-300 text-sm leading-relaxed relative z-10">{risk}</p>
+                <div className="glass-card text-white p-8 rounded-xl border border-white/10 shadow-2xl relative overflow-hidden group hover:-translate-y-1 transition-transform duration-500">
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-gold-500/10 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity duration-500 group-hover:opacity-100" />
+
+                    <div className="relative z-10">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" />
+                            <span className="text-xs font-bold text-gold-500 uppercase tracking-widest">Risk Mitigation</span>
+                        </div>
+                        <p className="text-slate-200 text-sm leading-relaxed font-light border-l-2 border-gold-500/30 pl-4">{risk}</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -49,15 +49,24 @@ export function DemoFrame() {
                 </div>
 
                 {/* Frame */}
+                {/* Frame with Reflection */}
                 <div className={clsx(
-                    "mx-auto transition-all duration-500 ease-in-out border-4 border-navy-900 rounded-xl overflow-hidden shadow-2xl bg-white relative",
-                    device === "desktop" ? "w-full max-w-6xl h-[600px] md:h-[800px]" : "w-full max-w-[375px] h-[750px]"
+                    "mx-auto transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-xl overflow-hidden relative group",
+                    device === "desktop" ? "w-full max-w-6xl h-[600px] md:h-[800px] shadow-2xl" : "w-full max-w-[375px] h-[750px] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)]"
                 )}>
-                    <div className="absolute top-0 w-full h-8 bg-navy-900 flex items-center px-4 gap-2">
-                        <div className="w-2 h-2 rounded-full bg-red-500" />
-                        <div className="w-2 h-2 rounded-full bg-yellow-500" />
-                        <div className="w-2 h-2 rounded-full bg-green-500" />
-                        <div className="mx-auto text-[10px] text-slate-400 font-mono">anchor-capital.com</div>
+                    {/* Glass Reflection Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-20" />
+
+                    <div className="absolute top-0 w-full h-10 bg-navy-900 flex items-center px-4 gap-2 z-10 border-b border-white/5 shadow-sm">
+                        <div className="flex gap-1.5">
+                            <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F57] shadow-inner" />
+                            <div className="w-2.5 h-2.5 rounded-full bg-[#FEBC2E] shadow-inner" />
+                            <div className="w-2.5 h-2.5 rounded-full bg-[#28C840] shadow-inner" />
+                        </div>
+                        <div className="mx-auto bg-navy-950/50 px-32 py-1 rounded-md text-[10px] text-slate-400 font-mono border border-white/5 flex items-center gap-2">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                            anchor-capital.com
+                        </div>
                     </div>
                     <iframe
                         src="/demo"
