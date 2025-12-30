@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { AlertCircle, Lock, MousePointer2, LayoutTemplate, ArrowRight } from "lucide-react";
 import { AnalysisCard } from "@/components/case-study/AnalysisCard";
@@ -24,9 +25,18 @@ export default function CaseStudyPage() {
                         <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] mb-8">
                             Building Trust in <br /> High-Stakes Wealth Management.
                         </h1>
-                        <p className="text-xl text-slate-300 max-w-2xl leading-relaxed">
+                        <p className="text-xl text-slate-300 max-w-2xl leading-relaxed mb-10">
                             A strategic redesign of a boutique RIA website, moving from "generic capability listing" to a risk-aware, conversion-focused asset for UHNW tech founders.
                         </p>
+
+                        <div className="flex gap-4">
+                            <Link
+                                href="/demo"
+                                className="inline-flex items-center gap-2 bg-gold-500 text-navy-900 font-bold px-8 py-4 rounded-sm hover:bg-gold-400 transition-all hover:translate-x-1 shadow-[0_0_20px_rgba(245,158,11,0.2)]"
+                            >
+                                View Live Demo <ArrowRight size={20} />
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
             </section>
