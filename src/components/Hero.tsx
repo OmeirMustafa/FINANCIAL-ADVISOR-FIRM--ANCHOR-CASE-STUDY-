@@ -4,9 +4,13 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { TrendingUp, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { HeroMetrics } from "./case-study/HeroMetrics"; // Assuming this exists or I will create simplified
 
 export function Hero() {
+    const [valuation, setValuation] = useState(5000000);
+    const savings = valuation * 0.17; // Mock logic: 17% savings diff
+
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden pt-24 pb-20">
             {/* Background Ambience */}
@@ -72,11 +76,29 @@ export function Hero() {
                     <div className="relative group">
                         <div className="absolute inset-0 bg-gold-500/20 rounded-xl blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700" />
                         <div className="relative z-10 glass-card p-8 rounded-xl transform rotate-[-2deg] hover:rotate-0 transition-transform duration-700">
-                            <div className="flex justify-between items-start mb-10">
+
+                            {/* Header / Input */}
+                            <div className="mb-8">
+                                <label className="text-xs uppercase tracking-widest text-slate-400 mb-2 block">Exit Valuation (Drag to Simulate)</label>
+                                <div className="flex items-center gap-4 mb-4">
+                                    <input
+                                        type="range"
+                                        min="2000000"
+                                        max="50000000"
+                                        step="1000000"
+                                        value={valuation}
+                                        onChange={(e) => setValuation(Number(e.target.value))}
+                                        className="w-full h-1 bg-navy-900 rounded-lg appearance-none cursor-pointer accent-gold-500 hover:accent-gold-400 transition-all"
+                                    />
+                                    <span className="text-white font-mono text-sm">${(valuation / 1000000).toFixed(0)}M</span>
+                                </div>
+                            </div>
+
+                            <div className="flex justify-between items-start mb-6">
                                 <div>
                                     <p className="text-xs uppercase tracking-widest text-slate-400 mb-1">Projected Tax Savings</p>
                                     <p className="text-4xl font-serif text-white">
-                                        $<CountUp end={1420000} separator="," duration={2.5} />
+                                        $<CountUp end={savings} separator="," duration={1} key={savings} />
                                     </p>
                                 </div>
                                 <TrendingUp className="text-emerald-400 w-8 h-8" />
@@ -84,21 +106,40 @@ export function Hero() {
 
                             {/* Simple Bars */}
                             <div className="space-y-4">
-                                <div className="flex items-center gap-4">
+                                <div className="space-y-2">
+                                    <div className="flex justify-between text-[10px] text-slate-500 uppercase tracking-wider">
+                                        <span>Without Strategy (Tax: ~37%)</span>
+                                        <span>${(valuation * 0.37).toLocaleString()}</span>
+                                    </div>
                                     <div className="w-full bg-navy-900 h-2 rounded-full overflow-hidden">
-                                        <motion.div initial={{ width: 0 }} animate={{ width: "85%" }} transition={{ duration: 1.5 }} className="h-full bg-emerald-500" />
+                                        <motion.div
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${(valuation * 0.37 / (valuation * 0.4)) * 100}%` }} // Simplified visual logic
+                                            transition={{ duration: 0.5 }}
+                                            className="h-full bg-red-500/50"
+                                        />
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-4 opacity-50">
+
+                                <div className="space-y-2">
+                                    <div className="flex justify-between text-[10px] text-slate-500 uppercase tracking-wider">
+                                        <span className="text-emerald-400">With Anchor (~20%)</span>
+                                        <span className="text-white">${((valuation * 0.37) - savings).toLocaleString()}</span>
+                                    </div>
                                     <div className="w-full bg-navy-900 h-2 rounded-full overflow-hidden">
-                                        <motion.div initial={{ width: 0 }} animate={{ width: "60%" }} transition={{ duration: 1.5, delay: 0.2 }} className="h-full bg-gold-500" />
+                                        <motion.div
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${(((valuation * 0.37) - savings) / (valuation * 0.4)) * 100}%` }}
+                                            transition={{ duration: 0.5 }}
+                                            className="h-full bg-emerald-500"
+                                        />
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="mt-10 flex justify-between text-xs text-slate-500 font-mono">
-                                <span>PRE-PLANNING</span>
-                                <span>POST-PLANNING</span>
+                            <div className="mt-8 pt-6 border-t border-white/5 flex justify-between text-xs text-slate-500 font-mono">
+                                <span>QSBS ELIGIBLE</span>
+                                <span className="text-gold-500">TRUST STRUCTURED</span>
                             </div>
                         </div>
                     </div>
