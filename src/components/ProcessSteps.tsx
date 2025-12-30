@@ -48,16 +48,19 @@ export function ProcessSteps() {
                             transition={{ delay: i * 0.2, duration: 0.6 }}
                             className="relative z-10 group"
                         >
-                            <div className="bg-navy-900 border border-white/10 p-8 rounded-sm hover:border-gold-500/30 hover:bg-navy-800/50 transition-all duration-500 h-full">
+                            <div className="glass-card border border-white/10 p-8 rounded-lg hover:border-gold-500/30 transition-all duration-500 h-full relative group-hover:-translate-y-2">
+                                {/* Glow Effect */}
+                                <div className="absolute inset-0 bg-gold-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                                 {/* Icon */}
-                                <div className="w-16 h-16 bg-navy-800 rounded-full flex items-center justify-center border border-white/10 mb-8 mx-auto group-hover:scale-110 group-hover:border-gold-500 transition-all duration-300 shadow-xl">
-                                    <step.icon className="text-gold-500 w-6 h-6" />
+                                <div className="relative w-16 h-16 bg-navy-900 rounded-full flex items-center justify-center border border-white/10 mb-8 mx-auto group-hover:border-gold-500 group-hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] transition-all duration-500">
+                                    <step.icon className="text-slate-400 group-hover:text-gold-500 w-6 h-6 transition-colors duration-300" />
                                 </div>
 
-                                <div className="text-center">
-                                    <span className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">{step.time}</span>
-                                    <h3 className="text-xl font-serif text-white mb-4">{step.title}</h3>
-                                    <p className="text-sm text-slate-400 leading-relaxed">
+                                <div className="text-center relative z-10">
+                                    <span className="block text-[10px] font-bold text-gold-500 uppercase tracking-[0.2em] mb-3">{step.time}</span>
+                                    <h3 className="text-xl font-serif text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gold-200 transition-all">{step.title}</h3>
+                                    <p className="text-sm text-slate-400 leading-relaxed font-light">
                                         {step.desc}
                                     </p>
                                 </div>
