@@ -22,32 +22,34 @@ export function Nav() {
             )}>
                 <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="text-xl md:text-2xl font-serif font-bold text-white tracking-tight z-50 relative">
+                    <Link href="/" className="text-xl md:text-2xl font-serif font-bold text-white tracking-tight z-50 relative flex-shrink-0">
                         Anchor<span className="text-gold-500">.</span>
                     </Link>
 
-                    {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-8 lg:gap-12">
-                        {["Services", "Philosophy", "Process"].map((item) => (
-                            <Link
-                                key={item}
-                                href={`#${item.toLowerCase()}`}
-                                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group tracking-wide"
-                            >
-                                {item}
-                                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gold-500 transition-all duration-300 group-hover:w-full" />
-                            </Link>
-                        ))}
-                    </nav>
+                    {/* Desktop Nav - Centered */}
+                    <div className="hidden md:flex flex-1 justify-center">
+                        <nav className="flex items-center gap-8 lg:gap-12 bg-white/5 backdrop-blur-md px-8 py-2 rounded-full border border-white/10 shadow-lg">
+                            {["Services", "Philosophy", "Process"].map((item) => (
+                                <Link
+                                    key={item}
+                                    href={`#${item.toLowerCase()}`}
+                                    className="text-sm font-medium text-slate-200 hover:text-white transition-all relative group tracking-wide hover:scale-105"
+                                >
+                                    {item}
+                                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-gold-500 transition-all duration-300 group-hover:w-full" />
+                                </Link>
+                            ))}
+                        </nav>
+                    </div>
 
                     {/* CTAs */}
-                    <div className="hidden md:flex items-center gap-6">
-                        <Link href="/login" className="text-xs font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">
+                    <div className="hidden md:flex items-center gap-6 flex-shrink-0">
+                        <Link href="/login" className="text-xs font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest hover:underline decoration-gold-500/50 underline-offset-4">
                             Client Login
                         </Link>
                         <Link
                             href="#audit"
-                            className="bg-gold-500 text-navy-900 text-xs md:text-sm font-bold tracking-wider px-6 py-3 rounded-sm hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                            className="bg-gold-500 text-navy-900 text-xs md:text-sm font-bold tracking-wider px-6 py-2.5 rounded-sm hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 active:translate-y-0"
                         >
                             Book Consultation
                         </Link>

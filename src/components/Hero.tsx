@@ -79,7 +79,7 @@ export function Hero() {
 
                             {/* Header / Input */}
                             <div className="mb-8">
-                                <label className="text-xs uppercase tracking-widest text-slate-400 mb-2 block">Exit Valuation (Drag to Simulate)</label>
+                                <label className="text-xs uppercase tracking-widest text-slate-300 font-bold mb-3 block">Exit Valuation (Drag to Simulate)</label>
                                 <div className="flex items-center gap-4 mb-4">
                                     <input
                                         type="range"
@@ -88,58 +88,58 @@ export function Hero() {
                                         step="1000000"
                                         value={valuation}
                                         onChange={(e) => setValuation(Number(e.target.value))}
-                                        className="w-full h-1 bg-navy-900 rounded-lg appearance-none cursor-pointer accent-gold-500 hover:accent-gold-400 transition-all"
+                                        className="w-full h-1.5 bg-navy-950 rounded-lg appearance-none cursor-pointer accent-gold-500 hover:accent-gold-400 transition-all focus:outline-none focus:ring-2 focus:ring-gold-500/50"
                                     />
-                                    <span className="text-white font-mono text-sm">${(valuation / 1000000).toFixed(0)}M</span>
+                                    <span className="text-white font-mono text-base font-bold min-w-[4rem]">${(valuation / 1000000).toFixed(0)}M</span>
                                 </div>
                             </div>
 
                             <div className="flex justify-between items-start mb-6">
                                 <div>
-                                    <p className="text-xs uppercase tracking-widest text-slate-400 mb-1">Projected Tax Savings</p>
-                                    <p className="text-4xl font-serif text-white">
+                                    <p className="text-xs uppercase tracking-widest text-slate-300 font-bold mb-1">Projected Tax Savings</p>
+                                    <p className="text-4xl md:text-5xl font-serif text-white drop-shadow-md">
                                         $<CountUp end={savings} separator="," duration={1} key={savings} />
                                     </p>
                                 </div>
-                                <TrendingUp className="text-emerald-400 w-8 h-8" />
+                                <TrendingUp className="text-emerald-400 w-10 h-10 drop-shadow-sm" />
                             </div>
 
                             {/* Simple Bars */}
-                            <div className="space-y-4">
+                            <div className="space-y-6">
                                 <div className="space-y-2">
-                                    <div className="flex justify-between text-[10px] text-slate-500 uppercase tracking-wider">
-                                        <span>Without Strategy (Tax: ~37%)</span>
-                                        <span>${(valuation * 0.37).toLocaleString()}</span>
+                                    <div className="flex justify-between text-[11px] text-slate-300 font-bold uppercase tracking-wider">
+                                        <span>Without Strategy (37%)</span>
+                                        <span className="text-white">${(valuation * 0.37).toLocaleString()}</span>
                                     </div>
-                                    <div className="w-full bg-navy-900 h-2 rounded-full overflow-hidden">
+                                    <div className="w-full bg-navy-950 h-3 rounded-full overflow-hidden border border-white/5">
                                         <motion.div
                                             initial={{ width: 0 }}
-                                            animate={{ width: `${(valuation * 0.37 / (valuation * 0.4)) * 100}%` }} // Simplified visual logic
+                                            animate={{ width: `${(valuation * 0.37 / (valuation * 0.4)) * 100}%` }}
                                             transition={{ duration: 0.5 }}
-                                            className="h-full bg-red-500/50"
+                                            className="h-full bg-gradient-to-r from-red-600 to-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"
                                         />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <div className="flex justify-between text-[10px] text-slate-500 uppercase tracking-wider">
+                                    <div className="flex justify-between text-[11px] text-slate-300 font-bold uppercase tracking-wider">
                                         <span className="text-emerald-400">With Anchor (~20%)</span>
-                                        <span className="text-white">${((valuation * 0.37) - savings).toLocaleString()}</span>
+                                        <span className="text-white font-bold">${((valuation * 0.37) - savings).toLocaleString()}</span>
                                     </div>
-                                    <div className="w-full bg-navy-900 h-2 rounded-full overflow-hidden">
+                                    <div className="w-full bg-navy-950 h-3 rounded-full overflow-hidden border border-white/5">
                                         <motion.div
                                             initial={{ width: 0 }}
                                             animate={{ width: `${(((valuation * 0.37) - savings) / (valuation * 0.4)) * 100}%` }}
                                             transition={{ duration: 0.5 }}
-                                            className="h-full bg-emerald-500"
+                                            className="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 shadow-[0_0_15px_rgba(52,211,153,0.4)]"
                                         />
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="mt-8 pt-6 border-t border-white/5 flex justify-between text-xs text-slate-500 font-mono">
+                            <div className="mt-8 pt-6 border-t border-white/10 flex justify-between text-xs text-slate-400 font-mono tracking-tight">
                                 <span>QSBS ELIGIBLE</span>
-                                <span className="text-gold-500">TRUST STRUCTURED</span>
+                                <span className="text-gold-500 font-bold shadow-gold-glow">TRUST STRUCTURED</span>
                             </div>
                         </div>
                     </div>
