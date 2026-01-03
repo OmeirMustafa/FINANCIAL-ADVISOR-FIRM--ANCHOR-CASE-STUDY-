@@ -5,7 +5,7 @@ import CountUp from "react-countup";
 import { TrendingUp, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { HeroMetrics } from "./case-study/HeroMetrics"; // Assuming this exists or I will create simplified
+import { HeroMetrics } from "./case-study/HeroMetrics";
 
 export function Hero() {
     const [valuation, setValuation] = useState(5000000);
@@ -13,6 +13,7 @@ export function Hero() {
 
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden pt-24 pb-20">
+            <HeroMetrics />
             {/* Background Ambience */}
             <div className="absolute inset-0 bg-[#1E293B] z-0" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-60 pointer-events-none" />
@@ -34,7 +35,7 @@ export function Hero() {
 
                     {/* Headline */}
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] tracking-tight">
-                        You've exited. <br />
+                        You&apos;ve exited. <br />
                         <span className="text-gradient-gold italic">Now the real tax fight begins.</span>
                     </h1>
 

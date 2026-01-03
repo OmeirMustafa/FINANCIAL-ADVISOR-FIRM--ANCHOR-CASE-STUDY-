@@ -34,7 +34,7 @@ export function AnalysisCard({ icon: Icon, title, problem, consequence, delay = 
                 </div>
                 <div>
                     <span className="text-xs font-bold text-red-500 uppercase tracking-widest block mb-1">Business Risk</span>
-                    <p className="text-slate-600 leading-relaxed text-sm italic">"{consequence}"</p>
+                    <p className="text-slate-600 leading-relaxed text-sm italic">&quot;{consequence}&quot;</p>
                 </div>
             </div>
         </motion.div>
