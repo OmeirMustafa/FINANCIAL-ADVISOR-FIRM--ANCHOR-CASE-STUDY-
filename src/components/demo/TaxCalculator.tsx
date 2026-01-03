@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { DollarSign, ArrowRight, RefreshCcw } from "lucide-react";
+import { useState } from "react";
+import { DollarSign, ArrowRight } from "lucide-react";
 import CountUp from "react-countup";
 
 export function TaxCalculator() {
@@ -65,6 +64,22 @@ export function TaxCalculator() {
                                 <div className="bg-navy-900 border border-white/20 rounded px-4 py-2 text-white font-mono text-lg w-full pl-10 focus-within:border-gold-500 transition-colors shadow-inner">
                                     {valuation.toLocaleString()}
                                 </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label className="block text-xs font-bold text-slate-200 uppercase tracking-widest mb-2">Cost Basis</label>
+                            <div className="relative">
+                                <DollarSign size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gold-500" />
+                                <input
+                                    type="number"
+                                    min="0"
+                                    max={valuation}
+                                    step="1000"
+                                    value={costBasis}
+                                    onChange={(e) => setCostBasis(Number(e.target.value))}
+                                    className="bg-navy-900 border border-white/20 rounded px-4 py-2 text-white font-mono text-lg w-full pl-10 focus-within:border-gold-500 transition-colors shadow-inner"
+                                />
                             </div>
                         </div>
 

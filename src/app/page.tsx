@@ -29,7 +29,7 @@ export default function CaseStudyPage() {
                             <span className="text-white">in High-Stakes Wealth.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-12 font-light">
-                            A strategic redesign moving from "generic capability listing" to a risk-aware, conversion-focused asset for UHNW tech founders.
+                            A strategic redesign moving from &quot;generic capability listing&quot; to a risk-aware, conversion-focused asset for UHNW tech founders.
                         </p>
 
                         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
@@ -53,10 +53,10 @@ export default function CaseStudyPage() {
                         <h2 className="text-3xl font-serif text-navy-900 mb-6"><span className="text-gradient-gold">Trust &gt; Aesthetics.</span></h2>
                         <p className="text-slate-600 leading-relaxed mb-6">
                             In the wealth management sector, a website is not a brochure—it is a risk assessment surface for prospective clients.
-                            High-net-worth individuals (HNWIs) do not "shop" for advisors; they vet them for competence, safety, and alignment.
+                            High-net-worth individuals (HNWIs) do not &quot;shop&quot; for advisors; they vet them for competence, safety, and alignment.
                         </p>
                         <p className="text-slate-600 leading-relaxed">
-                            Traditional advisory sites fail by prioritizing generic corporate imagery over specific value propositions, creating "cognitive drift"
+                            Traditional advisory sites fail by prioritizing generic corporate imagery over specific value propositions, creating &quot;cognitive drift&quot;
                             that leads to high bounce rates among sophisticated leads.
                         </p>
                     </div>
@@ -97,7 +97,7 @@ export default function CaseStudyPage() {
                         <AnalysisCard
                             icon={MousePointer2}
                             title="Generic Positioning"
-                            problem="Headlines like 'Comprehensive Wealth Management' create zero distinct value for specialist needs."
+                            problem="Headlines like &apos;Comprehensive Wealth Management&apos; create zero distinct value for specialist needs."
                             consequence="High bounce rate from niche leads (e.g., Founders) who don't feel understood."
                             delay={0}
                         />
@@ -105,13 +105,13 @@ export default function CaseStudyPage() {
                             icon={LayoutTemplate}
                             title="Visual Noise"
                             problem="Stock photography and cluttered navigation dilute authority markers."
-                            consequence="Perception of the firm as 'retail-grade' rather than 'institutional-grade'."
+                            consequence="Perception of the firm as &apos;retail-grade&apos; rather than &apos;institutional-grade&apos;."
                             delay={0.2}
                         />
                         <AnalysisCard
                             icon={AlertCircle}
                             title="Passive CTAs"
-                            problem="'Contact Us' forms create friction. They demand high commitment with unclear value exchange."
+                            problem="&apos;Contact Us&apos; forms create friction. They demand high commitment with unclear value exchange."
                             consequence="Lost conversion opportunities from hesitant but interested prospects."
                             delay={0.4}
                         />
@@ -125,16 +125,16 @@ export default function CaseStudyPage() {
                     <div className="mb-20 text-center max-w-3xl mx-auto">
                         <h2 className="text-4xl font-serif text-navy-900 mb-6">Strategic Redesign Decisions</h2>
                         <p className="text-slate-600">
-                            A shift from "Displaying Services" to "Solving Pains". Every design choice was vetted against business risk and conversion probability.
+                            A shift from &quot;Displaying Services&quot; to &quot;Solving Pains&quot;. Every design choice was vetted against business risk and conversion probability.
                         </p>
                     </div>
 
                     <StrategySection
                         number="01"
                         title="Outcome-First Hero"
-                        what="Replaced generic welcome text with a specific pain-point hook: 'Tax Drag' and 'Liquidity Preservation'."
+                        what="Replaced generic welcome text with a specific pain-point hook: &apos;Tax Drag&apos; and &apos;Liquidity Preservation&apos;."
                         why="Founders react to risk. By identifying their specific financial anxiety immediately, we establish authority before they scroll."
-                        risk="Mitigates the risk of being perceived as a 'generalist' advisor who doesn't understand complex equity structures."
+                        risk="Mitigates the risk of being perceived as a &apos;generalist&apos; advisor who doesn't understand complex equity structures."
                     />
 
                     <StrategySection
@@ -142,14 +142,14 @@ export default function CaseStudyPage() {
                         title="High-Contrast Aesthetics"
                         what="Adopted a strict Navy/White/Gold palette with increased white space and strict typographical hierarchy."
                         why="Clarity equals confidence. In finance, readability and order signal operational competence."
-                        risk="Reduces cognitive load, lowering the 'perceived risk' of engaging with the firm."
+                        risk="Reduces cognitive load, lowering the &apos;perceived risk&apos; of engaging with the firm."
                         isReverse
                     />
 
                     <StrategySection
                         number="03"
                         title="Low-Friction Bridge CTA"
-                        what="Introduced an 'Exit Tax Audit' as the primary conversion mechanism instead of a generic consultation."
+                        what="Introduced an &apos;Exit Tax Audit&apos; as the primary conversion mechanism instead of a generic consultation."
                         why="It offers specific, low-commitment value. It frames the interaction as an analysis, not a sales pitch."
                         risk="Increases lead readiness by filtering for prospects who have specific, solveable problems."
                     />
@@ -173,7 +173,7 @@ export default function CaseStudyPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-white mb-1">Reduced Hesitation</h4>
-                                        <p className="text-sm text-slate-400">Clear niche signaling prevents "am I in the right place?" doubt.</p>
+                                        <p className="text-sm text-slate-400">Clear niche signaling prevents &quot;am I in the right place?&quot; doubt.</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
@@ -182,7 +182,7 @@ export default function CaseStudyPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-white mb-1">Higher Lead Quality</h4>
-                                        <p className="text-sm text-slate-400">Self-selection through specific "Tech Founder" copy filters out irrelevant retail clients.</p>
+                                        <p className="text-sm text-slate-400">Self-selection through specific &quot;Tech Founder&quot; copy filters out irrelevant retail clients.</p>
                                     </div>
                                 </li>
                             </ul>
