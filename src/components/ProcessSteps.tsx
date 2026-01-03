@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Search, PieChart, ShieldCheck } from "lucide-react";
+import { Search, PieChart, ShieldCheck } from "lucide-react";
 
 const steps = [
     {
